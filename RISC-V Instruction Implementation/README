@@ -1,0 +1,65 @@
+# RISC-V Instruction Set Implementation
+
+## 📌 Overview
+This project was developed as part of the **e-Yantra Robotics Competition 2024 (EYRC24)** conducted by IIT Bombay.  
+The task involved implementing a subset of the **RISC-V ISA** (R-type and I-type instructions) in **Verilog** using Intel Quartus Prime.  
+The design was functionally verified using **ModelSim**  
+
+The goal of the project was to gain practical experience in **RTL coding, simulation, and verification**, while improving understanding of instruction execution at the hardware level.  
+
+---
+
+## 🛠️ Features
+- Implemented **R-type** instructions: `ADD`, `SUB`, `AND`, `OR`, etc.  
+- Implemented **I-type** instructions: `ADDI`, `ORI`, `ANDI`, etc.  
+- Modular design:
+  - **ALU** (Arithmetic Logic Unit)  
+  - **Register File**  
+  - **Instruction Decode Unit**  
+- Basic control logic for instruction execution  
+- **Testbench** included for simulation and debugging  
+
+---
+
+## 🧰 Tools & Technologies
+- **Verilog HDL** for RTL design  
+- **Intel Quartus Prime** (design + synthesis)  
+- **ModelSim** (functional simulation + waveform analysis)  
+- **TimingQuest Analyzer** (basic timing analysis)  
+
+---
+
+## ▶️ How to Run the Project
+### 1. Simulation in ModelSim
+1. Open `riscv_core_tb.v` (testbench).  
+2. Compile all Verilog files.  
+3. Run the simulation:  
+   ```
+   vsim riscv_core_tb
+   run 1000ns
+   ```
+4. Open `waveform` to check instruction execution results.  
+
+### 2. Synthesis in Quartus
+1. Create a new Quartus project.  
+2. Add source files from the `/src` folder.  
+3. Assign `riscv_core.v` as the top-level module.  
+4. Run synthesis and check reports in `/output_files/`.  
+
+---
+
+## ✅ Results
+- Verified correct execution of implemented instructions in simulation.  
+- Functional waveforms confirm ALU operations and register updates.  
+- Timing analysis showed successful operation at the target clock frequency.  
+
+*(Include a waveform screenshot here if possible)*  
+
+---
+  ## 👤 Author
+**Nalin Vyas**  
+B.Tech ECE | UVCE  
+Participant – EYRC24 (e-Yantra, IIT Bombay)  
+LinkedIn: [linkedin.com/in/nalin-jay-vyas](https://linkedin.com/in/nalin-jay-vyas) 
+  
+
